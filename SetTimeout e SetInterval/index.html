@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script contador</title>
+</head>
+<style>
+    h1, h2{
+        text-align: center;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    button {
+        display: inline-block;
+        margin: 0 2px;
+    }
+</style>
+<body>
+    <h1>Controle de tempo</h1>
+    <h2 id="temp">0</h2>
+    <button id="on" onclick="on()" style="background-color: green; color: white;">Ativar</button>
+    <button id="off" onclick="off()" style="background-color: red; color: white;">Desativar</button>
+    <button id="reset" onclick="reset()" style="background-color: yellow; color: rgb(0, 0, 0);">Resetar</button>
+
+    <script src="index.js"></script>
+</body>
+</html>

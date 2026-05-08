@@ -57,8 +57,50 @@ setInterval(
 setInterval(
     function week(){
         let data = new Date();
-        let minute = data.getSeconds();
-        document.getElementById('seconds').innerHTML = minute;
+        let seconds = data.getSeconds();
+        document.getElementById('seconds').innerHTML = seconds;
     }, 100
 );
+// Mili Segundos
+setInterval(
+    function week(){
+        let data = new Date();
+        let miliseconds = data.getMilliseconds();
+        document.getElementById('miliseconds').innerHTML = miliseconds;
+    }
+);
 
+// Pega data padrão brasileira - DIA/MES/ANO
+var data = new Date();
+let DataBR = data.toLocaleString('pt-BR', {timeStyle: 'short'});
+console.log(DataBR);
+
+// Pegar os valores separados
+d = new Date();
+diaMes = d.getDate();
+mes = d.getMonth() + 1;
+ano = d.getFullYear();
+
+function addZero(x) {return x<10 ? '0' + x : '' + x};
+
+let dataPadraoBR = diaMes + "/" + addZero(mes) + "/" + ano;
+console.log(dataPadraoBR);
+
+// COMPARAR DATAS - MAIOR OU MENOR. Ex: vencimentos
+var hoje = new Date();
+var vencimento = new Date(2022, 0, 15);
+
+if(hoje > vencimento) {
+    console.log("Sua conta venceu FDP vou mandar os cara ir te buscar ai em casa desgraçado!")
+} else {
+    console.log("Ainda não venceu, tudo certo! Vou te chamar para o meu casamento padrinho!")
+}
+
+// Diferença de dias entre datas
+var dataInicial = new Date();
+var dataFinal = new Date(2022, 11, 31);
+
+var diferencaTempo = dataFinal.getTime() - dataInicial.getTime();
+var diferencaDias = Math.ceil(diferencaTempo / (24 * 60 * 60 * 1000));
+
+console.log(diferencaDias + " dias");

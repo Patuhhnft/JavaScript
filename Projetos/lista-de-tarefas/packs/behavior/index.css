@@ -46,8 +46,7 @@ main{
     display: flex;
     flex-flow: row wrap;
     width: 90%;
-    margin: auto auto;   
-    border: 1px solid blue;
+    margin: auto auto;
     padding-top: 40px;
 }
 /* Area do check-box */
